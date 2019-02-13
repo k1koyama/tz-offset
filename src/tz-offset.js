@@ -17,7 +17,7 @@ module.exports = (function() {
     }
 
     function timeAt(date, timezone){
-        let timeUtc = removeOffset(date);
+        var timeUtc = removeOffset(date);
         var offset = offsetOf(timezone) * -60000;
         return new Date(timeUtc + offset);
     }
